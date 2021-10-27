@@ -1,0 +1,23 @@
+{
+    "name": "evg-dev/light_php_curl",
+    "description": "Light PHP curl interface",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeny",
+            "email": "evg.develop@gmail.com"
+        }
+    ],
+    "version": "0.0.1",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">5.3.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "evg_dev\\LightCurl\\": "src/"
+        }
+    }
+}
