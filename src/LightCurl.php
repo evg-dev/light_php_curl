@@ -11,7 +11,7 @@ class LightCurl
     /**
      * @param null $url
      * @return string
-     * @throws \Exception
+     * @throws LightCurlException
      */
     public static function get($url = null)
     {
@@ -24,7 +24,7 @@ class LightCurl
      * @param null $url
      * @param array $fields
      * @return string
-     * @throws \Exception
+     * @throws LightCurlException
      */
     public static function post($url = null, $fields = [])
     {

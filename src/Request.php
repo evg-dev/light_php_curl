@@ -20,7 +20,6 @@ class Request
      * Request constructor.
      * @param null $url
      * @param array $fields
-     * @throws \Exception
      */
     public function __construct($url = null, $fields = [])
     {
@@ -76,7 +75,6 @@ class Request
     }
 
     /**
-     * @return bool|string
      * @throws LightCurlException
      */
     protected function curlExec()
@@ -85,7 +83,9 @@ class Request
         $this->full_response = curl_exec($this->ch);
 
         if (curl_errno($this->ch)) {
+            curl_close($this->ch);
             throw new LightCurlException(var_dump(curl_error($this->ch)));
+
         }
 
         $this->parseResponse();
